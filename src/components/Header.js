@@ -59,7 +59,6 @@ const SearchContainer = styled.div`
   .icon {
     font-size: 24px;
     color: #eb5757;
-    padding-left: 1rem;
 
     @media (max-width: 768px) {
       padding: 18px;
