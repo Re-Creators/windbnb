@@ -6,6 +6,7 @@ import Properties from "./components/Properties";
 import data from "./data/stays.json";
 import { CSSTransition } from "react-transition-group";
 import ModalOverlay from "./components/ModalOverlay";
+import styled from "styled-components";
 
 function App() {
   const [stays, setStays] = useState([...data]);
@@ -46,8 +47,21 @@ function App() {
         toggleDrawer={() => setShowDrawer(false)}
       />
       <Properties stays={stays} />
+      <Footer>
+        created by <span>Re-Creators</span> - devChallenges.io
+      </Footer>
     </div>
   );
 }
 
 export default App;
+
+const Footer = styled.footer`
+  margin: 24px 0px;
+  text-align: center;
+  color: #828282;
+  span {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+`;
